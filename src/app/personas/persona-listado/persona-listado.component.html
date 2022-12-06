@@ -1,0 +1,31 @@
+<div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let persona of listadoPersonas;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{persona.nombre}}</td>
+        <td>{{persona.apellido}}</td>
+        <td>{{persona.edad}}</td>
+        <td>
+          <button (click)="eliminarPersona(persona)">Eliminar Persona</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <div>
+    <button (click)="mostrarFormulario()">Mostrar Formulario</button>
+  </div>
+</div>
